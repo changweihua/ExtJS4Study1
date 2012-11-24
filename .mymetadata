@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ExtJS4Study"
+  id="myeclipse.1348640248256"
+  context-root="/ExtJS4Study"
+  j2ee-spec="6.0"
+  archive="ExtJS4Study.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

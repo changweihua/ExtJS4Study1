@@ -1,0 +1,79 @@
+一、选择模式的根类：Ext.selection.Model
+    重要方法
+        1、撤销选择deselect(Ext.data.Model/Index records, Boolean usppressEvent)
+        2、得到选择的数据getSelection():Array
+        3、得到最后被选择数据getLastSelected():void
+        4、判断你指定的数据是否被选择上isSelected(Record/Number record):boolean
+        5、选择你指定的行selectRange(Ext.data.Model/Number startRow, Ext.data.Model/Number endRow, [Boolean keepExisting]):Ext.selection.Model
+            keepExisting true保持已经选择的，false重新选择
+            
+    隐藏了一个单元格的选择模式selType:'cellmodel'
+        重要方法
+            1、得到被选择的单元格getCurrentPosition():Object
+                Ext.JSON.encode()   
+                itemClick:function(Ext.view.View this, Ext.data.Model record, HtmlElement item, Number index, Ext.EventObject e, Object options)
+            2、selectByPosition({'row':2, 'column':3});
+    
+    Ext.selection.RowModel  rowmodel 行选择器
+        重要性
+            multiSelect 允许多选
+            simpleSelect 单选
+            enableKeyNav 允许使用键盘导航
+
+二、Grid的特性 Ext.grid.feature.Feature
+    Ext.grid.feature.RowBody 表格的行体
+    
+        重要方法
+            1、getAdditionalData(Object data, Number index, Ext.data.Model record, Object options)
+                如果你要展示这个面板，必须复写这个方法
+                    features:[
+                        Ext.create('Ext.grid.feature.RowBody', {
+                            getAdditionalData(data, index, recore, options){
+                                 
+                            }
+                        })
+                    ]  
+                    
+                必须返回行体的对象
+                    var headerCt = this.view.headerCt;
+                    colspan = headerCt.getColumnCount();
+                    return {
+                        rowBody:'',
+                        rowBodyCls:this.rowBodyCls;
+                        rowBodyColspan:colspan
+                    };
+                    
+ --------------------------------------------------------------------------------
+    Ext.grid.feature.AbstractSummary
+        Ext.grid.feature.Summary
+            1、使用方法
+                1、第一步
+                features:[{
+                    ftype:'summary'
+                }]
+                2、第二步
+                columns中配置summaryType:'count' (count, sum, min, max, average)
+                summaryRenderer:function(value, summaryData, dataIndex){
+                    return Ext.String.format(' : ' + value);
+                }
+ --------------------------------------------------------------------------------
+    Ext.grid.feature.Grouping
+        1、在store中设置可以分组的属性
+            groupField:''
+        2、在view中增加代码
+            Ext.create('Ext.grid.feature.Grouping', {
+                groupByText:'职业分组',
+                groupHeaderTpl:'职业{name} 一共{rows.length}人',
+                showGroupsText:'展示分组',
+                startCollapsed:true
+            })
+            
+            重要事件
+            groupclick
+            groupdbclick
+            groupcontextmenu
+            groupexpand
+            Ext.grid.feature.GroupingSummary 
+ --------------------------------------------------------------------------------
+ 
+---------------------------------------------------------------------------------                

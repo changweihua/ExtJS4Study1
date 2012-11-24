@@ -1,0 +1,14 @@
+数据模型基本要讲三个大部分 model proxy store
+
+1、普通model的创建
+    数据模型对真实世界中对事物在系统中的反应
+    extjs4.0 中的model相当于DB中的table 或 Java中的class
+2、利用Ext.regModel创建模型
+3、创建model的实例
+    实例化对象的方法
+4、Validations
+5、自定义验证器
+6、简单数据代理
+    完成数据的CRUD
+7、Model的一对多和多对一
+    teacher 1=>n student

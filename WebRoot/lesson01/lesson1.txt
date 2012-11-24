@@ -1,0 +1,19 @@
+1、Hello word
+    模拟JS的alert
+2、学习ExtJS4.0的准备工作和学习方法
+    HTML --> 熟悉
+    CSS --> 熟悉
+    JavaScript --> 熟练
+    JS的 OO --> 熟练
+    Ajax --> 熟练
+    
+    JavaScript设计模式，进阶书籍
+    征服Ajax Web 2.0 开发技术详解 纯JS-jQuery-综合讲述
+    
+    学习资源：google、百度、开源论坛、官方的demo和API文档
+    学习方法
+    
+Ext.Array
+    every函数：遇到不符合条件的值，返回false，停止循环
+    filter函数：
+        

@@ -1,0 +1,3 @@
+MVC重构lesson11的项目
+
+store层需要引入model

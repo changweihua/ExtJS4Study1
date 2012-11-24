@@ -1,0 +1,20 @@
+store是一个存储数据对象Model的集合缓存，它可以为extjs的可视化组件提供数据
+
+类结构
+    Ext.data.AbstractStore
+        Ext.data.Store
+            Ext.data.ArrayStore
+            Ext.data.DirectStore
+            Ext.data.JsonStore
+        Ext.data.TreeStore
+        
+
+Ext.data.Store 使用
+    参数
+        autoLoad(Boolean/Object):自动加载数据，自动调用load
+        data(Array):内置数据对象的数组，初始化的时候就要被装载
+        model(Model):数据集相关的模型
+        fields(Field):字段的集合，程序会自动生成相对应的Model
+    方法
+        each(Function f, [Object scope]):void 遍历数据中的Model
+        

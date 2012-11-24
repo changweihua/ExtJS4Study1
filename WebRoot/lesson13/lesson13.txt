@@ -1,0 +1,33 @@
+Ext.grid.column.Column xtype:'gridcolumn'
+    列模式的种类
+    Ext.grid.column.Action xtype:'actioncolumn'
+        在表格中渲染一组图标按钮，并赋予它某种功能
+        altTex:String 设置应用image的alt
+        handler:function(view, rowIndex, colIndex, item, e)
+        icon: 图标资源地址
+        iconCls: 图标样式
+        items: 多个图标的数组
+        stopSelection: 设置是否单击选中
+        
+    把写到view的代码写到控制层
+        Ext.grid.column.Boolean xtype:'booleancolumn'
+            falseText, trueText
+        Ext.grid.column.Date xtype:datecolumn
+            format:'Y年m月n日'
+        Ext.grid.column.Number xtype:numbercolumn
+            format:'0,000'
+        Ext.grid.column.Template xtype:templatecolumn
+            tpl:''
+            
+不在column包下面的
+    Ext.grid.RowNumber xtype:rownumberer
+    
+    
+ 数据字典
+    业务数据字典(可变)：一般存在数据库
+        风险等级，城市
+    不变的数据字典：可以存放在js的集合类中
+        男、女
+        是、否
+        人的血型
+        

@@ -1,0 +1,14 @@
+Ext.Ajax 是Ext.data.Connection的一个子类，提供了简单的方式进行Ajax的功能实现
+1、主要方法
+    abort：终止一个没有完成的Ajax请求
+    isLoading：判断指定的Ajax请求是否正在运行
+    parseStatus：返回请求响应的代码
+    request：发送服务器的请求(重点)
+    
+2、Ext.ElementLoader
+    方便我们重新构建页面
+    load方法
+    startAutoRefresh方法
+    
+3、多级联动菜单
+    可以考虑前台和后台的缓存
